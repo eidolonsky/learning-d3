@@ -1,1 +1,307 @@
-[{"No.":3,"Nationality":"Brazil","Position":"MF","Player":"Fabinho"},{"No.":4,"Nationality":"Netherlands","Position":"DF","Player":"Virgil van Dijk"},{"No.":5,"Nationality":"Netherlands","Position":"MF","Player":"Georginio Wijnaldum"},{"No.":6,"Nationality":"Croatia","Position":"DF","Player":"Dejan Lovren"},{"No.":7,"Nationality":"England","Position":"MF","Player":"James Milner"},{"No.":8,"Nationality":"Guinea","Position":"MF","Player":"Naby Keïta"},{"No.":9,"Nationality":"Brazil","Position":"FW","Player":"Roberto Firmino"},{"No.":10,"Nationality":"Senegal","Position":"FW","Player":"Sadio Mané"},{"No.":11,"Nationality":"Egypt","Position":"FW","Player":"Mohamed Salah"},{"No.":12,"Nationality":"England","Position":"DF","Player":"Joe Gomez"},{"No.":13,"Nationality":"Brazil","Position":"GK","Player":"Alisson"},{"No.":14,"Nationality":"England","Position":"MF","Player":"Jordan Henderson"},{"No.":15,"Nationality":"England","Position":"FW","Player":"Daniel Sturridge"},{"No.":18,"Nationality":"Spain","Position":"DF","Player":"Alberto Moreno"},{"No.":20,"Nationality":"England","Position":"MF","Player":"Adam Lallana"},{"No.":21,"Nationality":"England","Position":"MF","Player":"Alex Oxlade-Chamberlain"},{"No.":22,"Nationality":"Belgium","Position":"GK","Player":"Simon Mignolet"},{"No.":23,"Nationality":"Switzerland","Position":"MF","Player":"Xherdan Shaqiri"},{"No.":24,"Nationality":"England","Position":"FW","Player":"Rhian Brewster"},{"No.":26,"Nationality":"Scotland","Position":"DF","Player":"Andrew Robertson"},{"No.":27,"Nationality":"Belgium","Position":"FW","Player":"Divock Origi"},{"No.":32,"Nationality":"Cameroon","Position":"DF","Player":"Joël Matip"},{"No.":47,"Nationality":"England","Position":"DF","Player":"Nathaniel Phillips"},{"No.":48,"Nationality":"England","Position":"MF","Player":"Curtis Jones"},{"No.":58,"Nationality":"Wales","Position":"FW","Player":"Ben Woodburn"},{"No.":62,"Nationality":"Republic of Ireland","Position":"GK","Player":"Caoimhin Kelleher"},{"No.":64,"Nationality":"Portugal","Position":"MF","Player":"Rafael Camacho"},{"No.":66,"Nationality":"England","Position":"DF","Player":"Trent Alexander-Arnold"}]
+{  
+  "nodes":[
+    {
+      "id": "FW"
+    }
+    {
+      "id": "MF"
+    }
+    {
+      "id": "DF"
+    }
+    {
+      "No.": 3,
+      "Nationality": "Brazil",
+      "Position": "MF",
+      "id": "Fabinho"
+    },
+    {
+      "No.": 4,
+      "Nationality": "Netherlands",
+      "Position": "DF",
+      "id": "Virgil van Dijk"
+    },
+    {
+      "No.": 5,
+      "Nationality": "Netherlands",
+      "Position": "MF",
+      "id": "Georginio Wijnaldum"
+    },
+    {
+      "No.": 6,
+      "Nationality": "Croatia",
+      "Position": "DF",
+      "id": "Dejan Lovren"
+    },
+    {
+      "No.": 7,
+      "Nationality": "England",
+      "Position": "MF",
+      "id": "James Milner"
+    },
+    {
+      "No.": 8,
+      "Nationality": "Guinea",
+      "Position": "MF",
+      "id": "Naby Keïta"
+    },
+    {
+      "No.": 9,
+      "Nationality": "Brazil",
+      "Position": "FW",
+      "id": "Roberto Firmino"
+    },
+    {
+      "No.": 10,
+      "Nationality": "Senegal",
+      "Position": "FW",
+      "id": "Sadio Mané"
+    },
+    {
+      "No.": 11,
+      "Nationality": "Egypt",
+      "Position": "FW",
+      "id": "Mohamed Salah"
+    },
+    {
+      "No.": 12,
+      "Nationality": "England",
+      "Position": "DF",
+      "id": "Joe Gomez"
+    },
+    {
+      "No.": 13,
+      "Nationality": "Brazil",
+      "Position": "GK",
+      "id": "Alisson"
+    },
+    {
+      "No.": 14,
+      "Nationality": "England",
+      "Position": "MF",
+      "id": "Jordan Henderson"
+    },
+    {
+      "No.": 15,
+      "Nationality": "England",
+      "Position": "FW",
+      "id": "Daniel Sturridge"
+    },
+    {
+      "No.": 18,
+      "Nationality": "Spain",
+      "Position": "DF",
+      "id": "Alberto Moreno"
+    },
+    {
+      "No.": 20,
+      "Nationality": "England",
+      "Position": "MF",
+      "id": "Adam Lallana"
+    },
+    {
+      "No.": 21,
+      "Nationality": "England",
+      "Position": "MF",
+      "id": "Alex Oxlade-Chamberlain"
+    },
+    {
+      "No.": 22,
+      "Nationality": "Belgium",
+      "Position": "GK",
+      "id": "Simon Mignolet"
+    },
+    {
+      "No.": 23,
+      "Nationality": "Switzerland",
+      "Position": "MF",
+      "id": "Xherdan Shaqiri"
+    },
+    {
+      "No.": 24,
+      "Nationality": "England",
+      "Position": "FW",
+      "id": "Rhian Brewster"
+    },
+    {
+      "No.": 26,
+      "Nationality": "Scotland",
+      "Position": "DF",
+      "id": "Andrew Robertson"
+    },
+    {
+      "No.": 27,
+      "Nationality": "Belgium",
+      "Position": "FW",
+      "id": "Divock Origi"
+    },
+    {
+      "No.": 32,
+      "Nationality": "Cameroon",
+      "Position": "DF",
+      "id": "Joël Matip"
+    },
+    {
+      "No.": 47,
+      "Nationality": "England",
+      "Position": "DF",
+      "id": "Nathaniel Phillips"
+    },
+    {
+      "No.": 48,
+      "Nationality": "England",
+      "Position": "MF",
+      "id": "Curtis Jones"
+    },
+    {
+      "No.": 58,
+      "Nationality": "Wales",
+      "Position": "FW",
+      "id": "Ben Woodburn"
+    },
+    {
+      "No.": 62,
+      "Nationality": "Republic of Ireland",
+      "Position": "GK",
+      "id": "Caoimhin Kelleher"
+    },
+    {
+      "No.": 64,
+      "Nationality": "Portugal",
+      "Position": "MF",
+      "id": "Rafael Camacho"
+    },
+    {
+      "No.": 66,
+      "Nationality": "England",
+      "Position": "DF",
+      "id": "Trent Alexander-Arnold"
+    }
+  ],
+  "links": [
+    {
+      "source": "Fabinho",
+      "target": "MF"
+    }
+    {
+      "source": "Georginio Wijnaldum",
+      "target": "MF"
+    }
+    {
+      "source": "James Milner",
+      "target": "MF"
+    }
+    {
+      "source": "Naby Keïta",
+      "target": "MF"
+    }
+    {
+      "source": "Jordan Henderson",
+      "target": "MF"
+    }
+    {
+      "source": "Adam Lallana",
+      "target": "MF"
+    }
+    {
+      "source": "Alex Oxlade-Chamberlain",
+      "target": "MF"
+    }
+    {
+      "source": "Xherdan Shaqiri",
+      "target": "MF"
+    }
+    {
+      "source": "Curtis Jones",
+      "target": "MF"
+    }
+    {
+      "source": "Rafael Camacho",
+      "target": "MF"
+    }
+    {
+      "source": "Alisson",
+      "target": "GK"
+    }
+    {
+      "source": "Caoimhin Kelleher",
+      "target": "GK"
+    }
+    {
+      "source": "Simon Mignolet",
+      "target": "GK"
+    }
+    {
+      "source": "Sadio Mané",
+      "target": "FW"
+    }
+    {
+      "source": "Mohamed Salah",
+      "target": "FW"
+    }
+    {
+      "source": "Daniel Sturridge",
+      "target": "FW"
+    }
+    {
+      "source": "Rhian Brewster",
+      "target": "FW"
+    }
+    {
+      "source": "Divock Origi",
+      "target": "FW"
+    }
+    {
+      "source": "Ben Woodburn",
+      "target": "FW"
+    }
+    {
+      "source": "Roberto Firmino",
+      "target": "FW"
+    }
+    {
+      "source": "Virgil van Dijk",
+      "target": "DF"
+    }
+    {
+      "source": "Dejan Lovren",
+      "target": "DF"
+    }
+    {
+      "source": "Joe Gomez",
+      "target": "DF"
+    }
+    {
+      "source": "Alberto Moreno",
+      "target": "DF"
+    }
+    {
+      "source": "Andrew Robertson",
+      "target": "DF"
+    }
+    {
+      "source": "Joël Matip",
+      "target": "DF"
+    }
+    {
+      "source": "Nathaniel Phillips",
+      "target": "DF"
+    }
+    {
+      "source": "Trent Alexander-Arnold",
+      "target": "DF"
+    }
+    {
+      "source": "GK",
+      "target": "DF"
+    }
+    {
+      "source": "DF",
+      "target": "MF"
+    }
+    {
+      "source": "MF",
+      "target": "FW"
+    }
+  ]
+}  
