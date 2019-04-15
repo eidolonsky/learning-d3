@@ -1,14 +1,23 @@
 {  
   "nodes":[
     {
+      "No.":"",
+      "Nationality":"",
+      "Position":"",
       "id": "FW"
-    }
+    },
     {
+      "No.":"",
+      "Nationality":"",
+      "Position":"",      
       "id": "MF"
-    }
+    },
     {
+      "No.":"",
+      "Nationality":"",
+      "Position":"",      
       "id": "DF"
-    }
+    },
     {
       "No.": 3,
       "Nationality": "Brazil",
@@ -182,123 +191,123 @@
     {
       "source": "Fabinho",
       "target": "MF"
-    }
+    },
     {
       "source": "Georginio Wijnaldum",
       "target": "MF"
-    }
+    },
     {
       "source": "James Milner",
       "target": "MF"
-    }
+    },
     {
       "source": "Naby Keïta",
       "target": "MF"
-    }
+    },
     {
       "source": "Jordan Henderson",
       "target": "MF"
-    }
+    },
     {
       "source": "Adam Lallana",
       "target": "MF"
-    }
+    },
     {
       "source": "Alex Oxlade-Chamberlain",
       "target": "MF"
-    }
+    },
     {
       "source": "Xherdan Shaqiri",
       "target": "MF"
-    }
+    },
     {
       "source": "Curtis Jones",
       "target": "MF"
-    }
+    },
     {
       "source": "Rafael Camacho",
       "target": "MF"
-    }
+    },
     {
       "source": "Alisson",
       "target": "GK"
-    }
+    },
     {
       "source": "Caoimhin Kelleher",
       "target": "GK"
-    }
+    },
     {
       "source": "Simon Mignolet",
       "target": "GK"
-    }
+    },
     {
       "source": "Sadio Mané",
       "target": "FW"
-    }
+    },
     {
       "source": "Mohamed Salah",
       "target": "FW"
-    }
+    },
     {
       "source": "Daniel Sturridge",
       "target": "FW"
-    }
+    },
     {
       "source": "Rhian Brewster",
       "target": "FW"
-    }
+    },
     {
       "source": "Divock Origi",
       "target": "FW"
-    }
+    },
     {
       "source": "Ben Woodburn",
       "target": "FW"
-    }
+    },
     {
       "source": "Roberto Firmino",
       "target": "FW"
-    }
+    },
     {
       "source": "Virgil van Dijk",
       "target": "DF"
-    }
+    },
     {
       "source": "Dejan Lovren",
       "target": "DF"
-    }
+    },
     {
       "source": "Joe Gomez",
       "target": "DF"
-    }
+    },
     {
       "source": "Alberto Moreno",
       "target": "DF"
-    }
+    },
     {
       "source": "Andrew Robertson",
       "target": "DF"
-    }
+    },
     {
       "source": "Joël Matip",
       "target": "DF"
-    }
+    },
     {
       "source": "Nathaniel Phillips",
       "target": "DF"
-    }
+    },
     {
       "source": "Trent Alexander-Arnold",
       "target": "DF"
-    }
+    },
     {
       "source": "GK",
       "target": "DF"
-    }
+    },
     {
       "source": "DF",
       "target": "MF"
-    }
+    },
     {
       "source": "MF",
       "target": "FW"
