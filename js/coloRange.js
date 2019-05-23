@@ -20,7 +20,7 @@ svg.selectAll("circle")
    .append("circle")
    .attr("cy", 200)
    .attr("cx", function(i, d) {
-    return (30 + i) * i;
+    return (50 + i) * i;
    })
    .attr("r", function(d) {
     return d;
