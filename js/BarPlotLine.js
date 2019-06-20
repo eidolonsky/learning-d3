@@ -4,8 +4,8 @@ var margin = {
     left: 50,
     right: 10
   },
-  width = 600 - margin.left - margin.right,
-  height = 600 - margin.top - margin.bottom;
+  width = 400 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 
 var svg = d3
   .select("#my_datavis")
