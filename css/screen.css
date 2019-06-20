@@ -19,3 +19,14 @@
   stroke: #333333;
   stroke-width: 1.5px;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#my_datavis svg {
+  box-shadow: 1px 1px 3px 2px #555555;
+  margin: 30px;
+}
