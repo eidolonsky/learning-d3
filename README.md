@@ -9,3 +9,4 @@ One d3.js project a week.
 - **Week Three**: Bar + Plot + Line Chart
 - **Week Four**: Random Circles, the [output](https://codepen.io/eidolonsky/pen/BgQaqq)
 - **Week Five**: [Tree Map](https://www.d3-graph-gallery.com/graph/treemap_basic.html)
+- **Week Six**: Pie Chart
