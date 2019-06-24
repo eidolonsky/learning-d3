@@ -41,10 +41,7 @@ svg
   .attr("fill", function(d, i) {
     return color[i];
   })
-  .style("stroke-width", "2px")
-	.on("mouseover", function(d){return tooltip.style("visibility", "visible");})
-	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px");})
-	.on("mouseout", function(d){return tooltip.style("visibility", "hidden");});
+  .style("stroke-width", "2px");
 
 svg
   .selectAll("mySlices")
@@ -74,20 +71,6 @@ svg
 	.on("mouseover", function(d){return tooltip.style("visibility", "visible");})
 	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("font-size", "5px").style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px");})
 	.on("mouseout", function(d){return tooltip.style("visibility", "hidden");});
-
-svg
-  .selectAll("mySlices")
-  .data(data_ready)
-  .enter()
-  .append("text")
-  .text(function(d) {
-    return d.data.key;
-  })
-  .attr("transform", function(d) {
-    return "translate(" + arcGenerator2.centroid(d) + ")";
-  })
-  .style("text-anchor", "middle")
-  .style("font-size", 10);
 
 var tooltip = d3.select("body")
 	.append("div")
