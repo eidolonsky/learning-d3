@@ -54,7 +54,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/he
             return color(d.value)
   })
          .on("mouseover", function(d) { return tooltip.style("visibility", "visible") })
-         .on("mousemove", function(d) { return tooltip.html("The value of this cell is " + d.value).style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px").style("font-size", "10px")})
+         .on("mousemove", function(d) { return tooltip.html("The value of this cell is " + d.value).style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px").style("font-size", "10px").style("opacity", 0.85)})
          .on("mouseout", function(d) { return tooltip.style("visibility", "hidden")})
   
   var tooltip = d3.select("body")
