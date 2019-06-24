@@ -1,118 +1,63 @@
-var margin = {
-    top: 20,
-    bottom: 20,
-    left: 20,
-    right: 20
-  },
-  width = 400 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+var width = 400, height = 400, margin = 30;
 
-var svg = d3
-  .select("#my_datavis")
+var radius = Math.min(width, height) / 2 - margin;
+
+var svg = d3.select("#my_datavis")
   .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
+  .attr("width", width)
+  .attr("height", height)
   .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_network.json", function(data) {
-  var allNodes = data.nodes.map(function(d) { return d.name })
-  
-  var x = d3.scalePoint()
-        .range([0,width])
-        .domain(allNodes)
-  
-  var labels = svg.selectAll("labels")
-    .data(data.nodes)
-    .enter()
-    .append("text")
-    .attr("x", function(d) { return x(d.name)})
-    .attr("y", height / 1.75 + 30)
-    .text(function(d) { return(d.name)})
-    .attr("text-anchor", "middle")
-    .on("mouseover", function(d) {
-      labels.attr("fill", "#B8B8B8")
-      d3.select(this).attr("fill", "#D05353")
-      nodes.attr("fill", function(node_d) {
-        return d.id === node_d.id ? "#52489C" : "#B8B8B8"
-      })
-      links.attr("stroke", function(link_d) {
-        return link_d.source === d.id || link_d.target === d.id ? "#E26D5C" : "#b8b8b8"
-      })
-      .attr("stroke-width", function(link_d) {
-        return link_d.source === d.id || link_d.target === d.id ? 6 : 1
-      })
-    })
-    .on("mouseout", function(d) {
-      labels.attr("fill", "#000000")
-        nodes.attr("fill", "#0D3B66")
-        links.attr("stroke", "#69b3a2")
-           .attr("stroke-width", 2)
-    })
-    
-  
-  var idToNode = {};
-  data.nodes.forEach(function(n) {
-    idToNode[n.id] = n;
-  })
+var data = {a: 1, b: 3, c:5, d:8, e:12}
 
-  var links = svg.selectAll("links")
-    .data(data.links)
-    .enter()
-    .append("path")
-    .attr("d", function(d) { 
-        start = x(idToNode[d.source].name)
-        end = x(idToNode[d.target].name)
-        return ["M", start, height / 1.75,
-              "A",
-               (start - end) / 2, ",",
-               (start - end) / 2, 0, 0, ",",
-                start < end ? 1 : 0, end, ",", height / 1.75]
-                .join(" ");
-        })
-    .attr("fill", "none")
-    .attr("stroke", "#69b3a2")
-    .attr("stroke-width", 2)
-    .on("mouseover", function (d) {
-        links.attr("stroke", "#B8B8B8")
-        d3.select(this).attr("stroke", "#E26D5C")
-                  .attr("stroke-width", 6)  
-        nodes.attr("fill", function(node_d) {
-          return node_d.id === d.source || node_d.id === d.target ? "#52489C" : "#B8B8B8"
-        })
-        labels.attr("fill", function(label_d) {
-          return label_d.id === d.source || label_d.id === d.target ? "#D05353" : "#B8B8B8"
-        })
-      })
-      .on("mouseout", function (d) {    
-        links.attr("stroke", "#69b3a2")
-           .attr("stroke-width", 2)
-        nodes.attr("fill","#0D3B66")
-        labels.attr("fill", "#000000")
-      })  
-  
-  var nodes = svg.selectAll("nodes")
-    .data(data.nodes)
-    .enter()
-    .append("circle")
-    .attr("cx", function(d) { return x(d.name)})
-    .attr("cy", height / 1.75)
-    .attr("r", 8)
-    .attr("fill", "#0D3B66")
-    .on("mouseover", function (d) {
-        nodes.attr("fill", "#B8B8B8")
-        d3.select(this).attr("fill", "#52489C")
-        links
-          .attr("stroke", function (link_d) { return link_d.source === d.id || link_d.target === d.id ? "#E26D5C" : "#b8b8b8";})
-          .attr("stroke-width", function (link_d) { return link_d.source === d.id || link_d.target === d.id ? 6 : 2;})
-        labels.attr("fill", function(label_d) {
-          return label_d.id === d.id ? "#D05353" : "#B8B8B8"
-        })
-      })
-      .on("mouseout", function (d) {
-        nodes.attr("fill", "#0D3B66")
-        links.attr("stroke", "#69b3a2")
-           .attr("stroke-width", 2)
-        labels.attr("fill", "#000000")        
-      })
-})
+var color = ["#D8E2DC", "#FFE5D9", "#FFCAD4", "#F4ACB7", "#9D8189"]
+var color2 = ["#1A535C", "#4ECDC4", "#B8B8D1", "#FF6B6B", "#FFE66D"]
+
+
+var pie = d3.pie()
+  .value(function(d) {return d.value; })
+var data_ready = pie(d3.entries(data))
+
+var arcGenerator = d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius-80)
+var arcGenerator2 = d3.arc()
+  .innerRadius(100)
+  .outerRadius(radius)
+
+svg.selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append('path')
+    .attr('d', arcGenerator)
+    .attr("stroke", "none")
+    .attr("fill", function(d,i) { return color[i]})
+    .style("stroke-width", "2px")
+
+svg.selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append("text")
+  .text(function(d) { return d.data.key})
+  .attr("transform", function(d) { return "translate(" + arcGenerator.centroid(d) + ")"})
+  .style("text-anchor", "middle")
+  .style("font-size", 17)
+
+svg.selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append('path')
+    .attr('d', arcGenerator2)
+    .attr("stroke", "none")
+    .attr("fill", function(d,i) { return color2[i]})
+    .style("stroke-width", "2px")
+
+svg.selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append("text")
+  .text(function(d) { return d.data.key})
+  .attr("transform", function(d) { return "translate(" + arcGenerator2.centroid(d) + ")"})
+  .style("text-anchor", "middle")
+  .style("font-size", 17)
