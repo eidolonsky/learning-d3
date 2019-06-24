@@ -43,7 +43,7 @@ svg
   })
   .style("stroke-width", "2px")
 	.on("mouseover", function(d){return tooltip.style("visibility", "visible");})
-	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("top", (event.pageY + 20)+"px").style("left",(event.pageX + 20)+"px");})
+	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px");})
 	.on("mouseout", function(d){return tooltip.style("visibility", "hidden");});
 
 svg
@@ -58,7 +58,7 @@ svg
     return "translate(" + arcGenerator.centroid(d) + ")";
   })
   .style("text-anchor", "middle")
-  .style("font-size", 17);
+  .style("font-size", 10);
 
 svg
   .selectAll("mySlices")
@@ -72,7 +72,7 @@ svg
   })
   .style("stroke-width", "2px")
 	.on("mouseover", function(d){return tooltip.style("visibility", "visible");})
-	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("top", (event.pageY + 20)+"px").style("left",(event.pageX + 20)+"px");})
+	.on("mousemove", function(d){return tooltip.html(d.data.key + ": " + d.data.value).style("font-size", "5px").style("top", (event.pageY + 25)+"px").style("left",(event.pageX)+"px");})
 	.on("mouseout", function(d){return tooltip.style("visibility", "hidden");});
 
 svg
@@ -87,7 +87,7 @@ svg
     return "translate(" + arcGenerator2.centroid(d) + ")";
   })
   .style("text-anchor", "middle")
-  .style("font-size", 17);
+  .style("font-size", 10);
 
 var tooltip = d3.select("body")
 	.append("div")
