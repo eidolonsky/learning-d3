@@ -6,6 +6,8 @@ One d3.js project a week.
 
 It actually doen't work out as one project per week. The frequency is quite unpredictable.
 
+Mostly time, I follow the tutorials on [d3-graph-gallery](https://www.d3-graph-gallery.com), and then develop the chart a little bit.
+
 ----
 
 - **Week One**: [Force Directed Graph](http://www.puzzlr.org/force-graphs-with-d3/)
