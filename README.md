@@ -17,7 +17,7 @@ Mostly time, I follow the tutorials on [d3-graph-gallery](https://www.d3-graph-g
 - **Week Four**: Random Circles => [demo](https://codepen.io/eidolonsky/pen/BgQaqq)
 - **Week Five**: [Tree Map](https://www.d3-graph-gallery.com/graph/treemap_basic.html)
 - **Week Six**: Pie + Donut Chart
-                Pie with data labels and Donut with tooltips
+  - Pie with data labels and Donut with tooltips
 - **Week Seven**: Arc Diagram
 - **Week Eight**: Heatmap
 - **Week Nine**: Histogram
