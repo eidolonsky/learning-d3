@@ -46,6 +46,7 @@ d3.csv(
       .data(data)
       .enter()
       .append("rect")
+      .attr("class", "Bar")
       .attr("x", function(d) {
         return x(d.Country) - 1;
       })
@@ -61,6 +62,7 @@ d3.csv(
     svg
       .append("path")
       .datum(data)
+      .attr("class", "Line")
       .attr("fill", "none")
       .attr("stroke", "#2E5077")
       .attr("stroke-width", 3.5)
@@ -81,6 +83,7 @@ d3.csv(
       .data(data)
       .enter()
       .append("circle")
+      .attr("class", "Plot")
       .attr("cx", function(d) {
         return x(d.Country);
       })
@@ -89,5 +92,23 @@ d3.csv(
       })
       .attr("r", 4)
       .attr("fill", "#C5283D");
-  }
-);
+    var color = ["#4DA1A9", "#C5283D", "#2E5077"]
+    var legend = ["Bar", "Plot", "Line"]
+      svg.selectAll("legends")
+          .append("g")
+          .data(legend)
+          .enter()
+         .append("text")
+         .attr("x", function(d,i) { return width + margin.right - margin.left - 40 * i})
+         .attr("y", 10)
+         .text(function(d) { return d})
+         .style("fill", function(d,i) { return color[i]})
+         .style("font-size", 15)
+         .on("click", function(d) {
+        textLine = d3.select(this).style("text-decoration")
+        console.log(textLine)
+        d3.select(this).style("text-decoration", textLine == "line-through" ? "none":"line-through" )
+        currentOpacity = d3.selectAll("." + d).style("opacity")
+        d3.selectAll("." + d).transition().duration(1000).style("opacity", currentOpacity == 1? 0:1)
+      })
+  });
