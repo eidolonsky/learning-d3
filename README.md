@@ -24,3 +24,4 @@ Mostly time, I follow the tutorials on [d3-graph-gallery](https://www.d3-graph-g
 - **Week Ten**: Hexbin with various colors for different groups of data
 - **Week Eleven**: Violin Chart
 - **Week Twelve**: Density Chart
+- **Week Thirteen**: Ridgeline
