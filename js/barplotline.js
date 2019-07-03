@@ -48,17 +48,18 @@ d3.csv(
       .append("rect")
       .attr("class", "Bar")
       .attr("x", function(d) {
-        return x(d.Country) - 1;
+        return x(d.Country) - 2;
       })
-      .attr("y", function(d) {
-        return y(d.Value);
-      })
-      .attr("width", 2)
-      .attr("height", function(d) {
-        return height - y(d.Value);
-      })
-      .attr("fill", "#4DA1A9");
-
+      .attr("width", 5)
+      .attr("fill", "#4DA1A9")
+      .attr("height", function(d) { return height - y(0)})
+      .attr("y", function(d) { return y(0)})
+    svg.selectAll("rect")
+       .transition()
+       .duration(800)
+       .attr("y", function(d) { return y(d.Value)} )
+       .attr("height", function(d) { return height - y(d.Value)})
+       .delay(function(d, i) { return i*100 })
     svg
       .append("path")
       .datum(data)
@@ -66,17 +67,18 @@ d3.csv(
       .attr("fill", "none")
       .attr("stroke", "#2E5077")
       .attr("stroke-width", 3.5)
-      .attr(
-        "d",
-        d3
-          .line()
-          .x(function(d) {
-            return x(d.Country);
-          })
-          .y(function(d) {
-            return y(d.Value);
-          })
-      );
+      .attr("d",d3.line()
+          .x(function(d) {return x(d.Country);})
+          .y(function(d) {return y(0);})
+      )
+    svg.selectAll(".Line")
+       .transition()
+       .duration(900)
+       .attr("d", d3.line()
+          .x(function(d) {return x(d.Country);})
+          .y(function(d) {return y(d.Value);})
+      )
+       .delay(function(d, i) { return i*100 })
 
     svg
       .selectAll("circle")
@@ -88,8 +90,18 @@ d3.csv(
         return x(d.Country);
       })
       .attr("cy", function(d) {
+        return y(0);
+      })
+    svg.selectAll("circle")
+      .transition()
+      .duration(500)
+      .attr("cx", function(d) {
+        return x(d.Country);
+      })
+      .attr("cy", function(d) {
         return y(d.Value);
       })
+      .delay(function(d, i) { return i*100 })
       .attr("r", 4)
       .attr("fill", "#C5283D");
     var color = ["#4DA1A9", "#C5283D", "#2E5077"]
