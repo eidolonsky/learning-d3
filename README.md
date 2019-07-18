@@ -27,9 +27,13 @@ Mostly time, I follow the tutorials on [d3-graph-gallery](https://www.d3-graph-g
 - **Week Twelve**: Density Chart
 - **Week Thirteen**: Ridgeline
 - **Week Forteen**: Parallel Coordinates Chart
+
 ----
+
 Spent some time to present these charts on portfolio page.
+
 ----
+
 - **Week Fifteen**: Bubble Chart
   - With interactive legends and scale
 - **Week Sixteen**: Froce Directed Bubble Packing
