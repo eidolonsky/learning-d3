@@ -38,4 +38,6 @@ Spent some time to present these charts on portfolio page.
   - With interactive legends and scale
 - **Week Sixteen**: Froce Directed Bubble Packing
   - Update data and force
+- **Week Seventeen**: Chord Chart
+- **Week Eighteen**: [Gooey Effect](https://www.visualcinnamon.com/2015/05/gooey-effect.html)
 
